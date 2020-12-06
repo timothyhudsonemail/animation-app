@@ -4,7 +4,7 @@ This project is a full stack animation application consisting of a client (this 
 
 ## Deployment
 
-The application can be visited here: https://nov-app2.timothyhudsonemail.vercel.app/
+The application can be visited here: https://chat-app.timothyhudsonemail.vercel.app/
 
 ## Notes
 
