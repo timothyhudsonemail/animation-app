@@ -10,6 +10,7 @@ export default class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
+      isLoading: false,
       click: false,
       click2: false,
       bg: "gray",
@@ -22,6 +23,7 @@ export default class App extends Component {
   
     const getImages = (e) => {
       e.preventDefault()
+      this.setState({isLoading: true})
 
       fetch("https://kill-me-6.herokuapp.com/a")
       .then(res => res.json())
@@ -41,7 +43,8 @@ export default class App extends Component {
             img11: result[0].img11,
             img12: result[0].img12,
             click: true,
-            activeImage: this.state.img1
+            activeImage: this.state.img1,
+            isLoading: false
             })
           })
     }
@@ -130,6 +133,9 @@ export default class App extends Component {
         <button onClick={getImages}>open</button>
         <br />
         <br />
+        <div style={{display:this.state.isLoading ? 'block' : 'none'}}>
+          <p>loading...</p>
+        </div>
         <div style={{display: this.state.click ? 'block' : 'none' }}>
           <button onClick={() => {
             open()
