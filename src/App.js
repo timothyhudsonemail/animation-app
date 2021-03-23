@@ -25,7 +25,7 @@ export default class App extends Component {
       e.preventDefault()
       this.setState({isLoading: true})
 
-      fetch("https://kill-me-6.herokuapp.com/a")
+      fetch("https://server-v1-2021.herokuapp.com/a")
       .then(res => res.json())
       .then(
         (result) => {
