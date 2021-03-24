@@ -130,7 +130,7 @@ export default class App extends Component {
     return (
       <div className="App">
         <br />
-      <h1 style={{fontFamily:"Commune NuitDebout"}}>animation app</h1>
+      <p style={{fontFamily:"Commune NuitDebout",fontSize:"33px"}}>animation app</p>
         <button onClick={getImages}>open</button>
         <br />
         <br />
