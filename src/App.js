@@ -137,7 +137,7 @@ export default class App extends Component {
       Technical info: This application is built using React. Front end hosted on Vercel (deployed via github), server built from scratch and hosted on Heroku. PSQL database stores .png animation file info, hosted on aws s3.
       </p>
     <br />
-      <p style={{fontFamily:"Avaraa",color:
+    
         <button onClick={getImages}>open</button>
         <br />
         <br />
