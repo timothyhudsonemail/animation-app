@@ -132,11 +132,6 @@ export default class App extends Component {
         <br />
       <h1 style={{fontFamily:"Avaraa"}}>animation app</h1>
       <br />
-      <p style={{color:"rgb(255, 51, 153)",fontFamily:"Avaraa",paddingLeft:"90px",paddingRight:"90px"}}>
-      Welcome! This is a full stack animation application which generates an animation with a transparent background. users are given the option to change the underlying background color. <br /><br />
-      Technical info: This application is built using React. Front end hosted on Vercel (deployed via github), server built from scratch and hosted on Heroku. PSQL database stores .png animation file info, hosted on aws s3.
-      </p>
-    <br />
     
         <button onClick={getImages}>open</button>
         <br />
@@ -160,15 +155,16 @@ export default class App extends Component {
             src= {this.state.activeImage}
             />
           <button onClick={changeBackground}>change background</button>
-            <p>animation png files hosted at aws s3<br />
-            via psql database<br />
-            server hosted at heroku<br />
-            client side app deployed via vercel<br />
-          </p>
 
           </div>
 
         </div>
+<div>
+            <p style={{color:"rgb(255, 51, 153)",fontFamily:"Avaraa",paddingLeft:"90px",paddingRight:"90px"}}>
+      Welcome! This is a full stack animation application which generates an animation with a transparent background. users are given the option to change the underlying background color. <br /><br />
+      Technical info: This application is built using React. Front end hosted on Vercel (deployed via github), server built from scratch and hosted on Heroku. PSQL database stores .png animation file info, hosted on aws s3.
+      </p>
+            </div>
         
         
       </div>
