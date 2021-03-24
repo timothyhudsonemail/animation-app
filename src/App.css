@@ -19,6 +19,16 @@
   }
 }
 
+@font-face {
+font-family: "Avaraa";
+src: url("fonts/Avara-Black.otf");
+}
+
+@font-face {
+  font-family: "Commune NuitDebout";
+  src: url("fonts/Commune NuitDebout.otf")
+}
+
 .seeIt {
   display: none
 }
