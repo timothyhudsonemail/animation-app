@@ -1,10 +1,6 @@
 import React, {Component} from 'react'
 import './App.css'
 
-
-
-
-
 export default class App extends Component {
 
   constructor(props) {
@@ -17,10 +13,8 @@ export default class App extends Component {
     }
   }
 
-
   render() {
 
-  
     const getImages = (e) => {
       e.preventDefault()
       this.setState({isLoading: true})
@@ -108,10 +102,10 @@ export default class App extends Component {
         },366)
       }
       else {
-          setTimeout(() => {
-            this.setState({activeImage: this.state.img1})
-          }, 366)
-          }
+        setTimeout(() => {
+          this.setState({activeImage: this.state.img1})
+        }, 366)
+      }
       setTimeout(animateImages, 0)
     }
 
@@ -131,46 +125,43 @@ export default class App extends Component {
       <div className="App">
         <br />
       <h1 style={{fontFamily:"Avaraa"}}>animation app</h1>
-      <br />
-    
-        <button onClick={getImages}>open</button>
+        <br />
+      <button onClick={getImages}>open</button>
         <br />
         <br />
-        <div style={{display:this.state.isLoading ? 'block' : 'none'}}>
-          <p>loading...</p>
-        </div>
-        <div style={{display: this.state.click ? 'block' : 'none' }}>
-          <button onClick={() => {
+      <div style={{display:this.state.isLoading ? 'block' : 'none'}}>
+        <p>loading...</p>
+      </div>
+      <div style={{display: this.state.click ? 'block' : 'none' }}>
+        <button onClick={() => {
             open()
             animateImages()
             }}>start
-          </button>
+        </button>
 
-          <div id="bg" className="background" style={{backgroundColor: this.state.bg}} />
-          
-          <div  style={{display: this.state.click2 ? 'block' : 'none' }}>
-            <img 
-              alt=""
-            className="super"
-            src= {this.state.activeImage}
-            />
-          <button onClick={changeBackground}>change background</button>
+      <div id="bg" className="background" 
+                   style={{backgroundColor: this.state.bg}} />
+      <div  style={{display: this.state.click2 ? 'block' : 'none' }}>
+         <img alt="animation placeholder"
+              className="super"
+              src= {this.state.activeImage}
+          />
+       <button onClick={changeBackground}>change background</button>
+       </div>
+     </div>
 
-          </div>
-
-        </div>
-<div>
-            
-            <br />
-            <p style={{color:"rgb(255, 51, 153)",fontFamily:"Avaraa",paddingLeft:"90px",paddingRight:"90px"}}>
+    <div>
+        <br />
+    <p style={{color:"rgb(255, 51, 153)",
+              fontFamily:"Avaraa",
+              paddingLeft:"90px",
+              paddingRight:"90px"}}>
       Welcome! This is a full stack animation application which generates an animation with a transparent background. users are given the option to change the underlying background color. <br /><br />
       Technical info: This application is built using React. Front end hosted on Vercel (deployed via github), server built from scratch and hosted on Heroku. PSQL database stores .png animation file info, hosted on aws s3.
-      </p>
-            </div>
-        
-        
-      </div>
-    )
-  }
+    </p>
+    </div>
+  </div>
+)
+}
 }
 
