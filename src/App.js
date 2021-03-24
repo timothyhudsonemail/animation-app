@@ -160,6 +160,8 @@ export default class App extends Component {
 
         </div>
 <div>
+            
+            <br />
             <p style={{color:"rgb(255, 51, 153)",fontFamily:"Avaraa",paddingLeft:"90px",paddingRight:"90px"}}>
       Welcome! This is a full stack animation application which generates an animation with a transparent background. users are given the option to change the underlying background color. <br /><br />
       Technical info: This application is built using React. Front end hosted on Vercel (deployed via github), server built from scratch and hosted on Heroku. PSQL database stores .png animation file info, hosted on aws s3.
