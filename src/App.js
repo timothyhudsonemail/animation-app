@@ -159,7 +159,7 @@ export default class App extends Component {
                      textAlign:"left",
               paddingLeft:"90px",
               paddingRight:"90px"}}>
-      Welcome! This is a full stack animation application which generates an animation with a transparent background. users are given the option to change the underlying background color.</p>
+      Welcome! This is a full stack animation application which generates an animation with a transparent background. Users are given the option to change the underlying background color.</p>
       </div>
         <div>
         
