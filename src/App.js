@@ -155,7 +155,7 @@ export default class App extends Component {
          <div style={{display:"flex",flexDirection:"row"}}>
     <div>
            <p style={{color:"rgb(255, 51, 153)",
-              fontFamily:"Avaraa",
+              fontFamily:"Varta",
                      textAlign:"left",
               paddingLeft:"90px",
               paddingRight:"90px"}}>
@@ -164,7 +164,7 @@ export default class App extends Component {
         <div>
         
         <p style={{color:"rgb(255, 51, 153)",
-              fontFamily:"Avaraa",
+              fontFamily:"Varta",
                  textAlign:"left",
               paddingLeft:"90px",
               paddingRight:"90px"}}>
