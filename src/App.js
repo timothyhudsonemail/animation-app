@@ -172,6 +172,7 @@ export default class App extends Component {
     </p>
     </div>
   </div>
+</div>
 )
 }
 }
