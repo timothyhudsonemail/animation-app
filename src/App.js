@@ -163,7 +163,7 @@ export default class App extends Component {
       </div>
         <div>
         
-        <pstyle={{color:"rgb(255, 51, 153)",
+        <p style={{color:"rgb(255, 51, 153)",
               fontFamily:"Avaraa",
                  textAlign:"left",
               paddingLeft:"90px",
