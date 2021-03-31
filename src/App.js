@@ -124,7 +124,7 @@ export default class App extends Component {
     return (
       <div className="App">
         <br />
-      <h1 style={{fontFamily:"Avaraa"}}>animation app</h1>
+      <h1 style={{fontFamily:"Varta"}}>animation app</h1>
         <br />
       <button onClick={getImages}>open</button>
         <br />
@@ -154,7 +154,7 @@ export default class App extends Component {
         <br />
          <div style={{display:"flex",flexDirection:"row"}}>
     <div>
-           <p style={{color:"rgb(255, 51, 153)",
+           <p style={{color:"black",
               fontFamily:"Varta",
                      textAlign:"left",
               paddingLeft:"90px",
@@ -163,7 +163,7 @@ export default class App extends Component {
       </div>
         <div>
         
-        <p style={{color:"rgb(255, 51, 153)",
+        <p style={{color:"black",
               fontFamily:"Varta",
                  textAlign:"left",
               paddingLeft:"90px",
