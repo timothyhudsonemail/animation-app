@@ -124,7 +124,7 @@ export default class App extends Component {
     return (
       <div className="App">
         <br />
-      <h1 style={{fontFamily:"Varta"}}>animation app</h1>
+      <h1 style={{fontFamily:"Varta"}}>Animation Study</h1>
         <br />
       <button onClick={getImages}>open</button>
         <br />
