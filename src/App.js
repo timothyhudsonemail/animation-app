@@ -10,6 +10,7 @@ export default class App extends Component {
       click: false,
       click2: false,
       bg: "gray",
+      chosenSection: false,
     }
   }
 
@@ -121,59 +122,81 @@ export default class App extends Component {
       }
     }
 
+    const navButtons = () => {
+      if(this.state.chosenSection === false)
+      {this.setState({chosenSection: true})}
+      else{
+        this.setState({chosenSection: false})
+      }
+    }
+
     return (
       <div className="App">
-        <br />
-      <h1 style={{fontFamily:"Varta"}}>Animation Study</h1>
-        <br />
-      <button onClick={getImages}>open</button>
-        <br />
-        <br />
-      <div style={{display:this.state.isLoading ? 'block' : 'none'}}>
-        <p>loading...</p>
-      </div>
-      <div style={{display: this.state.click ? 'block' : 'none' }}>
-        <button onClick={() => {
-            open()
-            animateImages()
-            }}>start
-        </button>
+        <h1 style={{fontFamily:"Varta"}}>Animation Study</h1>
+        <div style={{display:"flex",flexDirection:"row",height:"40px"}}>
+          
+          <div onClick={navButtons} id="appTitle" className={this.state.chosenSection ? "" : "selected"} style={{width:"50%"}}>
+          <p style={{cursor:"pointer"}}>App</p>
+          </div>
+          
+          <div onClick={navButtons} id="aboutTitle" className={this.state.chosenSection ? "selected" : ""} style={{width:"50%"}}>
+          <p style={{cursor:"pointer"}}>About</p>
+          </div>
+        </div> 
 
-      <div id="bg" className="background" 
-                   style={{backgroundColor: this.state.bg}} />
-      <div  style={{display: this.state.click2 ? 'block' : 'none' }}>
-         <img alt="animation placeholder"
-              className="super"
-              src= {this.state.activeImage}
-          />
-       <button onClick={changeBackground}>change background</button>
-       </div>
-     </div>
+        <div id="application" style={{display:this.state.chosenSection ? 'none' : 'block' }}>
 
-    <div>
         <br />
-         <div style={{display:"flex",flexDirection:"row"}}>
-    <div>
-           <p style={{color:"black",
-              fontFamily:"Varta",
-                     textAlign:"left",
-              paddingLeft:"90px",
-              paddingRight:"90px"}}>
-      Welcome! This is a full stack animation application which generates an animation with a transparent background. Users are given the option to change the underlying background color.</p>
-      </div>
-        <div>
+
+        <button onClick={getImages}>open</button>
         
-        <p style={{color:"black",
-              fontFamily:"Varta",
-                 textAlign:"left",
-              paddingLeft:"90px",
-              paddingRight:"90px"}}>
-                Technical info: This application is built using React. Front end hosted on Vercel (deployed via github), server built from scratch and hosted on Heroku. PSQL database stores .png animation file info, hosted on aws s3.
-    </p>
+        <br />
+        <br />
+
+        <div style={{display:this.state.isLoading ? 'block' : 'none'}}>
+          <p>loading...</p>
+        </div>
+        
+        <div style={{display: this.state.click ? 'block' : 'none' }}>
+          <button onClick={() => {
+              open()
+              animateImages()
+              }}>start
+          </button>
+
+          <div id="bg" 
+            className="background" 
+            style={{backgroundColor: this.state.bg}} />
+            <div style={{display: this.state.click2 ? 'block' : 'none' }}>
+              <img alt="animation placeholder"
+                   className="super"
+                   src= {this.state.activeImage}
+              />
+              <button onClick={changeBackground}>change background</button>
+              <div style={{height:"120px"}}></div>
+            
+            </div>
+        </div>
+      </div>
+
+      <div id="about" 
+           style={{display:this.state.chosenSection ? 'block' : 'none' }}>
+        <br />
+        <div className="about-style">
+          <div>
+            <p className="p-style">
+            Welcome! This is a full stack animation application which generates an animation with a transparent background. Users are given the option to change the underlying background color.
+            </p>
+          </div>
+        
+          <div>
+            <p className="p-style">
+            Technical info: This application is built using React. Front end hosted on Vercel (deployed via github), server built from scratch and hosted on Heroku. PSQL database stores .png animation file info, hosted on aws s3.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-</div>
 )
 }
 }

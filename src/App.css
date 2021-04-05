@@ -1,6 +1,7 @@
 .App {
   text-align: center;
   background-size: cover;
+  font-family:Varta;
 }
 
 
@@ -26,7 +27,7 @@ src: url("fonts/Avara-Black.otf");
   margin-right: auto;
   left: 0;
   right: 0;
-  top:210px;
+  top:252px;
   text-align: center;
   z-index: 2;
 }
@@ -40,3 +41,26 @@ src: url("fonts/Avara-Black.otf");
 
 }
 
+.selected {
+  background-color:lightgray;
+}
+
+.p-style {
+  color:black;
+  text-align:left;
+  margin: 20px;
+  max-width: 333px
+}
+
+.about-style {
+  display:flex;
+  flex-direction:row;
+  justify-content: space-around;
+}
+
+@media only screen and (max-width: 600px) {
+  .about-style {
+    flex-direction: column;
+    align-items: center;
+  }
+}
